@@ -1,10 +1,10 @@
-FROM python:3.6
+FROM python:3.6-alpine
 
 WORKDIR /app
 
 ADD requirements.txt /app/requirements.txt
 RUN pip install -r /app/requirements.txt
-RUN apt-get remove -y libxml2
+
 
 ADD src /app
 
